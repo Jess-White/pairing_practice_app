@@ -8,3 +8,11 @@ s = "loveleetcode",
 return 2.
 (The "l" and "o" are repeated, so the first non-repeating character is the "v", which is at index 2.)
 Note: You may assume the string contain only lowercase letters.
+
+Input is a string.
+Output is an integer: the index of the first non-repeating character in the string.
+I need to split the string into an array to process it.
+I need to go through each value in that array.
+I need to check to see whether each value is repeated elsewhere in the array.
+If no, I need to grab the index of that value and return it. 
+
