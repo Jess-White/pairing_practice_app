@@ -1,0 +1,54 @@
+/**
+ *
+ * It is well known that nuclear launch codes work both forward and reverse,
+ * meaning that code "123" is effectively the same as code "321", a major
+ * security flaw which we have top people working to correct. Someone has stolen
+ * an extremely long list of stolen launch codes, and you want to see how many
+ * "effective" codes were stolen, so that you know what codes to replace
+ *
+ * Determine how many unique codes are contained in an array of nuclear launch
+ * codes.
+ *
+ * Please report the big-O runtime complexity of your solution
+ * input: "123", "ab3", "321", "dpq"
+ * output: "123", "ab3", "dpq"
+ *
+ */
+
+
+"123": first string, we've seen we'll add it to our array
+seen items: "123"
+second input is "ab3"
+does seen items contain "ab3"?
+No -- add it to seen items
+seen items: "123", "ab3"
+
+
+
+
+
+
+The input: an array of numbers, either a series of integers or a string?
+(Maybe use parseInt just to control the input)
+The output: a set of those codes that are neither duplicated nor duplicated-in-reverse.
+I need to take in an array of strings.
+I need to output an array of selected strings.
+I need to check each string in the array.
+I need to check to see if each string is duplicated-in-reverse.
+I need to check to see if each sequence appears elsewhere in the array in reverse.
+
+most common word
+duplicative array 
+
+new_hash = {}
+old_array.map((string) => {
+    // if "123" is in the array, then skip it and move to the next item
+    // if it is not in the array, then add it and move to the next item
+    // we are going to deal with "321"
+    if (!new_hash.includes(string.reverse)) {
+      new_hash[string] = 0 // [string] is really saying that if the array does not contain string, then create the key for it {"123": 0, "ab3": 0}
+    }
+})
+old_array.map((string) => {
+    new_hash[:string] += 1
+})
